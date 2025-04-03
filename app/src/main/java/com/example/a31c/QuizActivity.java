@@ -69,6 +69,7 @@ public class QuizActivity extends AppCompatActivity {
             }
 
             if (selectedAnswer.equals(correctAnswer)) {
+                score++;
                 Toast.makeText(this, "Congratulations, that's right！", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Wrong answer. The correct answer is：" + correctAnswer, Toast.LENGTH_SHORT).show();
