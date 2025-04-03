@@ -3,7 +3,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -38,7 +37,7 @@ public class QuizActivity extends AppCompatActivity {
         optionButtons[3] = findViewById(R.id.option4);
 
         String name = getIntent().getStringExtra("userName");
-        userName.setText("Hello，" + name);
+        userName.setText(getString(R.string.hello_user, name));
 
         questions = Question.getSampleQuestions();
         showQuestion();
